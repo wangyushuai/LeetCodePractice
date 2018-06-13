@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.wys.practice.iml" filepath="$PROJECT_DIR$/.idea/modules/com.wys.practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.wys.practice_main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.wys.practice_main.iml" group="com.wys.practice" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.wys.practice_test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.wys.practice_test.iml" group="com.wys.practice" />
+    </modules>
+  </component>
+</project>
