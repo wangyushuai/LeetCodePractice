@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.Test;
 import java.util.*;
 
@@ -9,35 +10,37 @@ import java.util.*;
 public class LeetCode703 {
 
 
+
     @Test
     public void test() {
-
+        KthLargest kthLargest = new KthLargest(3, new int[]{1, 2, 3, 4});
+        Assert.assertEquals("LeetCode703", 3 ,kthLargest.add(5));
     }
 
 
-
-
     class KthLargest {
-        int[] result= {};
+        PriorityQueue<Integer> queue;
         int k;
+
         public KthLargest(int k, int[] nums) {
             this.k = k;
-            Arrays.sort(nums);
-            result = k > nums.length ? nums : Arrays.copyOfRange(nums,nums.length -k,nums.length);
+            this.queue = new PriorityQueue<>(k);
+            for(int i = 0;i< nums.length; i++) {
+                // 注意这一步是关键
+                add(nums[i]);
+            }
         }
 
         public int add(int val) {
-            if(result.length < k) {
-                int[] copy = Arrays.copyOf(result,result.length+1);
-                copy[result.length] = val;
-                result = copy;
+            if (queue.size() < this.k) {
+                queue.add(val);
+            } else if (val > queue.peek()) {
+                queue.poll();
+                queue.add(val);
             }
-            if (val < result[0]) {
-                result[0] = val;
-                Arrays.sort(result);
-            }
-            return result[0];
+            return queue.peek();
         }
+
     }
 
 
