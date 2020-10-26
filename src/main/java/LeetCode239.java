@@ -12,29 +12,24 @@ import java.util.Deque;
  */
 public class LeetCode239 {
     public int[] maxSlidingWindow(int[] nums, int k) {
-        if(nums.length==0) {
-            return new int[0];
-        }
-
-        int[] res = new int[nums.length - k + 1];
-        Deque<Integer> deque = new ArrayDeque<>();
-
-        for(int i=0;i<nums.length;i++) {
-            // 删除队列中小于窗口左边下标的元素
-            if(i >= k && i - k + 1 > deque.peek()) {
-                deque.remove();
+        int[] result = new int[nums.length-k+1];
+        Deque<Integer> deque = new ArrayDeque();
+        // 移动窗口
+        for (int i =0;i<nums.length;i ++)  {
+            // 移动窗口
+            if (i >=k && i-k+1 > deque.getFirst()){
+                deque.removeFirst();
             }
-            // 从队列右侧开始, 删除小于nums[i] 的元素
-            while(!deque.isEmpty() && nums[deque.peekLast()] < nums[i]) {
+            // 处理堆栈
+            while (!deque.isEmpty() && nums[i] > nums[deque.getLast()]) {
                 deque.removeLast();
             }
             deque.add(i);
-            // 队列左侧是最大值,加入结果
-            if(i - k + 1 >= 0) {
-                res[i - k + 1] = nums[deque.peek()];
+            if (i+1>=k) {
+                result[i-k+1] = nums[deque.getFirst()];
             }
         }
-        return res;
+        return result;
     }
 
 
