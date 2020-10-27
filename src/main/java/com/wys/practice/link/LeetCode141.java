@@ -1,4 +1,4 @@
-package com.wys.practice;
+package com.wys.practice.link;
 
 import java.util.HashSet;
 import java.util.Set;

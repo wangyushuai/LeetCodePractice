@@ -1,4 +1,4 @@
-package com.wys.practice;
+package com.wys.practice.link;
 
 /**
  * 交换链表中的两个节点
