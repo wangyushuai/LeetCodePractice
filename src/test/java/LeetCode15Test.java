@@ -1,11 +1,10 @@
+import com.wys.practice.LeetCode15;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by wangyushuai@fang.com on 2018/8/1.

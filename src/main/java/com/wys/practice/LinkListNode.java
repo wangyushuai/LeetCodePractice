@@ -1,3 +1,5 @@
+package com.wys.practice;
+
 /**
  *
  * @author wangyushuai@fang.com

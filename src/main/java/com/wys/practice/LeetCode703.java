@@ -1,3 +1,5 @@
+package com.wys.practice;
+
 import org.junit.Assert;
 import org.junit.Test;
 import java.util.*;
@@ -14,7 +16,7 @@ public class LeetCode703 {
     @Test
     public void test() {
         KthLargest kthLargest = new KthLargest(3, new int[]{1, 2, 3, 4});
-        Assert.assertEquals("LeetCode703", 3 ,kthLargest.add(5));
+        Assert.assertEquals("com.wys.practice.LeetCode703", 3 ,kthLargest.add(5));
     }
 
 

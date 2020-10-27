@@ -1,3 +1,6 @@
+package com.wys.practice.tree;
+
+import com.wys.practice.TreeNode;
 
 /**
  * 校验二叉树是搜索二叉树
@@ -11,7 +14,7 @@ public class LeetCode98 {
 
     }
 
-    public boolean helper(TreeNode root,Integer lower,Integer upper) {
+    public boolean helper(TreeNode root, Integer lower, Integer upper) {
         if (root == null) {
             return true;
         }

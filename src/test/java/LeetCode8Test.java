@@ -1,8 +1,7 @@
+import com.wys.practice.LeetCode8;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by wangyushuai@fang.com on 2018/6/13.

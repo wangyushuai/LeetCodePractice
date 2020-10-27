@@ -1,3 +1,5 @@
+package com.wys.practice;
+
 public class LeetCode2 {
     public static void main(String[] args) {
         ListNode l1 = new ListNode(2);

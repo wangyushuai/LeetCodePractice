@@ -1,3 +1,5 @@
+package com.wys.practice;
+
 /**
  * 树
  * @author wangyushuai2@jd.com
@@ -10,7 +12,11 @@ public class TreeNode {
 
     public TreeNode right;
 
-    public TreeNode(int val) {
+    TreeNode() {}
+    TreeNode(int val) { this.val = val; }
+    TreeNode(int val, TreeNode left, TreeNode right) {
         this.val = val;
+        this.left = left;
+        this.right = right;
     }
 }

@@ -1,3 +1,5 @@
+package com.wys.practice;
+
 /**
  * Created by wangyushuai@fang.com on 2018/4/13.
  */
