@@ -7,7 +7,7 @@ import com.wys.practice.TreeNode;
  * @author wangyushuai2@jd.com
  * @date 2020/10/27
  */
-public class LeetCode98 {
+public class Code98_ValidBST {
 
     public boolean isValidBST(TreeNode root) {
         return helper(root,null,null);
