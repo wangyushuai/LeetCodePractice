@@ -1,10 +1,7 @@
 package com.wys.practice;
 
 import org.junit.Test;
-
-import java.lang.reflect.Array;
 import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  * 最大数
