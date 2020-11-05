@@ -14,16 +14,16 @@ public class QuickSort {
     int partition(int arr[], int left, int right) {
         int i = left;
         int j = right;
-        int privot = arr[i];
+        int pivot = arr[i];
         while (i < j) {
-            while (i < j && arr[j] > privot) {
+            while (i < j && arr[j] > pivot) {
                 j --;
             }
             if (i < j) {
                 arr[i] = arr[j];
                 i ++;
             }
-            while (i < j && arr[i] < privot) {
+            while (i < j && arr[i] < pivot) {
                 i ++;
             }
             if (i < j) {
@@ -31,7 +31,7 @@ public class QuickSort {
                 j --;
             }
         }
-        arr[i] = privot;
+        arr[i] = pivot;
         return i;
     }
 
