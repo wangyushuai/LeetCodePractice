@@ -12,25 +12,26 @@ import java.util.Arrays;
 public class QuickSort {
 
     int partition(int arr[], int left, int right) {
-        int i = left, j = right;
-        int tmp = arr[left];
+        int i = left;
+        int j = right;
+        int privot = arr[i];
         while (i < j) {
-            while (i < j && arr[j] > tmp) {
-                j--;
+            while (i < j && arr[j] > privot) {
+                j --;
             }
             if (i < j) {
                 arr[i] = arr[j];
-                i++;
+                i ++;
             }
-            while (i < j && arr[i] < tmp) {
-                i++;
+            while (i < j && arr[i] < privot) {
+                i ++;
             }
             if (i < j) {
                 arr[j] = arr[i];
-                j--;
+                j --;
             }
         }
-        arr[i] = tmp;
+        arr[i] = privot;
         return i;
     }
 
