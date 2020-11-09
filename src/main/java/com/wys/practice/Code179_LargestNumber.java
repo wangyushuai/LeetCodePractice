@@ -5,6 +5,7 @@ import java.util.*;
 
 /**
  * 最大数
+ * 给定数组重组为要给最大数
  *
  * @author wangyushuai2@jd.com
  * @date 2020/10/27
