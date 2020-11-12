@@ -6,42 +6,43 @@ import org.junit.Test;
 import java.util.Arrays;
 
 /**
+ * 快速排序
  * @author wangyushuai2@jd.com
  * @date 2020/11/3
  */
 public class QuickSort {
 
     int partition(int arr[], int left, int right) {
-        int i = left;
-        int j = right;
-        int pivot = arr[i];
-        while (i < j) {
-            while (i < j && arr[j] > pivot) {
-                j --;
+        int pivot = arr[left];
+        while(left < right) {
+            while (left < right && arr[right] > pivot) {
+                right --;
             }
-            if (i < j) {
-                arr[i] = arr[j];
-                i ++;
+            if (left < right) {
+                arr[left] = arr[right];
+                left ++;
             }
-            while (i < j && arr[i] < pivot) {
-                i ++;
+            while (left < right && arr[left] < pivot) {
+                left ++;
             }
-            if (i < j) {
-                arr[j] = arr[i];
-                j --;
+            if (left < right) {
+                arr[right] = arr[left];
+                right --;
             }
         }
-        arr[i] = pivot;
-        return i;
+        arr[left] = pivot;
+        return left;
     }
 
     void quick_sort(int arr[], int left, int right) {
-        if(left > right) {
+        if (left >= right) {
             return;
         }
-        int j = partition(arr, left, right);
-        quick_sort(arr, left, j - 1);
-        quick_sort(arr, j + 1, right);
+        int p = partition(arr,left,right);
+        quick_sort(arr,left,p-1);
+        quick_sort(arr,p+1,right);
+
+
     }
     @Test
     public void test() {
