@@ -11,16 +11,17 @@ import org.junit.Test;
 public class Code704_Search {
 
     public int search(int[] nums, int target) {
-        int pivot, left = 0, right = nums.length - 1;
-        while (left <= right) {
-            pivot = left + (right - left) / 2;
-            if (nums[pivot] == target) {
+        int left = 0;
+        int right = nums.length -1;
+        while (left < right) {
+            int pivot = (right + left)/2;
+            if (target == nums[pivot]) {
                 return pivot;
             }
-            if (target < nums[pivot]) {
-                right = pivot - 1;
+            if (target > nums[pivot]) {
+                left = pivot +1;
             } else {
-                left = pivot + 1;
+                right = pivot -1;
             }
         }
         return -1;
@@ -31,8 +32,10 @@ public class Code704_Search {
         int[] arr = {-1,0,3,5,9,12};
         int i = search(arr,3);
         int j = search(arr,9);
+        int k = search(arr,20);
         Assert.assertEquals("二分查找-1",2,i);
         Assert.assertEquals("二分查找-2",4,j);
+        Assert.assertEquals("二分查找-3",-1,k);
     }
 
 
