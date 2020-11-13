@@ -12,7 +12,7 @@ import java.util.List;
  * @author wangyushuai2@jd.com
  * @date 2020/10/27
  */
-public class Code144_PreOrderTraversal {
+public class LeetCode144_PreOrderTraversal {
     /**
      * 前序遍历
      * @param root

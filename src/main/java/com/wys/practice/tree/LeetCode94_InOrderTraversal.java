@@ -10,7 +10,7 @@ import java.util.List;
  * @author wangyushuai2@jd.com
  * @date 2020/10/27
  */
-public class Code94_InOrderTraversal {
+public class LeetCode94_InOrderTraversal {
 
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();

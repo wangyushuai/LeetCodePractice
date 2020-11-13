@@ -8,7 +8,7 @@ import org.junit.Test;
  * @author wangyushuai2@jd.com
  * @date 2020/11/3
  */
-public class Code704_Search {
+public class LeetCode704_Search {
 
     public int search(int[] nums, int target) {
         int left = 0;
