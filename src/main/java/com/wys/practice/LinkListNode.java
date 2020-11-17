@@ -6,8 +6,8 @@ package com.wys.practice;
  * @date 2018/11/23
  */
 public class LinkListNode {
-    private int value;
-    private LinkListNode next;
+    public int value;
+    public LinkListNode next;
 
     public LinkListNode() { }
 
