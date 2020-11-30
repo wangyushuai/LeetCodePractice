@@ -17,30 +17,24 @@ public class LeetCode102_BinaryTreeLevelOrder {
 
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
-        if (root == null) {
-            return result;
-        }
-        Queue<TreeNode> queue = new ArrayDeque();
-        queue.add(root);
-        while (!queue.isEmpty()) {
-            List<Integer> level = new ArrayList();
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        while (! queue.isEmpty()) {
             int n = queue.size();
-            for (int i = 0; i < n; i++) {
+            List<Integer> level = new ArrayList<>();
+            for (int i = 0; i < n; i ++) {
                 TreeNode cur = queue.poll();
                 level.add(cur.val);
                 if (cur.left != null) {
-                    queue.add(cur.left);
+                    queue.offer(cur.left);
                 }
                 if (cur.right != null) {
-                    queue.add(cur.right);
+                    queue.offer(cur.right);
                 }
             }
             result.add(level);
         }
         return result;
-
-
-
     }
 
     @Test
