@@ -1,5 +1,6 @@
 package com.wys.practice.sort;
 
+import org.apache.commons.lang3.StringUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -50,7 +51,7 @@ public class QuickSort {
         int[] array = {1,2,3,4,5,6,7};
         int[] sortedArray = {4,1,7,2,3,5,6};
         quick_sort(sortedArray,0, sortedArray.length -1);
-        Assert.assertTrue("快速排序", Arrays.equals(array,sortedArray));
+        Assert.assertEquals("快速排序",StringUtils.join(array,','),StringUtils.join(sortedArray,','));
 
     }
 }
