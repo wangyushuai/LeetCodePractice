@@ -4,9 +4,6 @@ import com.wys.practice.TreeNode;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * 校验二叉树是搜索二叉树
  *
@@ -25,31 +22,24 @@ public class LeetCode98_ValidBST {
 
     }
 
-    public boolean inOrderValid(TreeNode root) {
-        List<Integer> result = new ArrayList<>();
-        return inOrder(root,result);
-//        inOrder(root,result);
-//        List<Integer> copy = new ArrayList<>(result);
-//        return result.equals(copy.stream().sorted());
-
-    }
-
     protected Integer inOrderPrev =  null;
-
-    protected boolean inOrder(TreeNode root,List<Integer> result) {
+    public boolean inOrderValid(TreeNode root) {
         if (root == null) {
             return true;
         }
-        if (! inOrder(root.left,result)) {
+        if (! inOrderValid(root.left)) {
             return false;
         }
         if (inOrderPrev != null && root.val < inOrderPrev) {
             return false;
         }
         inOrderPrev = root.val;
-        result.add(root.val);
-        return  inOrder(root.right,result);
+        //result.add(root.val);
+        return  inOrderValid(root.right);
+
     }
+
+
 
     /**
      * 递归写法
