@@ -11,6 +11,25 @@ public class LinkListNode {
 
     public LinkListNode() { }
 
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        LinkListNode comObj = (LinkListNode) obj;
+        LinkListNode cur = this;
+        while (cur != null) {
+            if (cur.value != comObj.value) {
+                return false;
+            }
+            cur = cur.next;
+            comObj = comObj.next;
+        }
+        return true;
+    }
+
     public LinkListNode(int value,LinkListNode next) {
         this.value = value;
         this.next = next;
