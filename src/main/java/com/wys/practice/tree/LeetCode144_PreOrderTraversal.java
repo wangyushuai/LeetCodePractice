@@ -1,7 +1,6 @@
 package com.wys.practice.tree;
 
 import com.wys.practice.TreeNode;
-import org.apache.commons.lang3.StringUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -40,14 +39,11 @@ public class LeetCode144_PreOrderTraversal {
                 new TreeNode(2,
                         new TreeNode(3,null,null),
                         null));
-        List<Integer> result = preOrderTraversal(treeNode);
-        String excepted = StringUtils.join(Arrays.asList(1,2,3),",");
-        Assert.assertEquals("二叉树先序遍历",excepted,StringUtils.join(result,","));
+        Assert.assertEquals("二叉树先序遍历",Arrays.asList(1,2,3),preOrderTraversal(treeNode));
 
         TreeNode treeNode5 = new TreeNode(1,
                 new TreeNode(2, null, null),null);
-        List<Integer> result5 = preOrderTraversal(treeNode5);
-        Assert.assertEquals("二叉树先序遍历","1,2",StringUtils.join(result5,","));
+        Assert.assertEquals("二叉树先序遍历",Arrays.asList(1,2),preOrderTraversal(treeNode5));
     }
 
 }
