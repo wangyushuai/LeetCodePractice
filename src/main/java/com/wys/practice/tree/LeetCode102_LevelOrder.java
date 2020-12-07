@@ -12,7 +12,7 @@ import java.util.*;
  * @author wangyushuai2@jd.com
  * @date 2020/11/27
  */
-public class LeetCode102_BinaryTreeLevelOrder {
+public class LeetCode102_LevelOrder {
 
 
     public List<List<Integer>> levelOrder(TreeNode root) {
@@ -22,15 +22,15 @@ public class LeetCode102_BinaryTreeLevelOrder {
         while (! queue.isEmpty()) {
             int n = queue.size();
             List<Integer> level = new ArrayList<>();
-            for (int i = 0; i < n; i ++) {
+            for (int i = 0;i < n; i++) {
                 TreeNode cur = queue.poll();
-                level.add(cur.val);
                 if (cur.left != null) {
                     queue.offer(cur.left);
                 }
                 if (cur.right != null) {
                     queue.offer(cur.right);
                 }
+                level.add(cur.val);
             }
             result.add(level);
         }
