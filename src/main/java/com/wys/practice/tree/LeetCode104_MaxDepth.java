@@ -4,9 +4,6 @@ import com.wys.practice.TreeNode;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 /**
  * 二叉树最大深度
  * 两种思路：深度优先遍历和广度优先遍历都可以。
