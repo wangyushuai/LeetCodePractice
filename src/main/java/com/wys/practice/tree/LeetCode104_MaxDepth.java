@@ -6,21 +6,25 @@ import org.junit.Test;
 
 /**
  * 二叉树最大深度
- * 两种思路：深度优先遍历和广度优先遍历都可以。
+ * 两种思路：
+ *  - 深度优先遍历
+ *  - 广度优先遍历
+ *  - 递归统计
+ *
  * @author wangyushuai2@jd.com
  * @date 2020/12/1
  */
 public class LeetCode104_MaxDepth {
 
-
-    public int MaxDepth(TreeNode root) {
+    public int maxDepth(TreeNode root) {
+        // terminator
         if (root == null) {
             return 0;
-        } else {
-            int leftHeight = MaxDepth(root.left);
-            int rightHeight = MaxDepth(root.right);
-            return Math.max(leftHeight,rightHeight) + 1;
         }
+        // process
+        // recurse
+        return Math.max(maxDepth(root.left),maxDepth(root.right)) +1;
+        // drill down
     }
 
     @Test
