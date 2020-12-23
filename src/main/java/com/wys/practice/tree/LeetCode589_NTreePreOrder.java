@@ -18,19 +18,19 @@ public class LeetCode589_NTreePreOrder {
 
     public List<Integer> preOrder(Node root) {
         List<Integer> result = new ArrayList<>();
-        LinkedList<Node> stack = new LinkedList<>();
+        Stack<Node> stack = new Stack<>();
         if (root == null) {
             return new ArrayList<>();
         }
-        stack.offer(root);
+        stack.push(root);
         while (! stack.isEmpty()) {
-            Node node = stack.pollLast();
+            Node node = stack.pop();
             result.add(node.val);
             // 反转压栈
             if (node.children != null &&  node.children.size() > 0) {
                 Collections.reverse(node.children);
                 for (Node child : node.children) {
-                    stack.offer(child);
+                    stack.push(child);
                 }
             }
         }
